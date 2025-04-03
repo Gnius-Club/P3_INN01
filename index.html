@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Taller: ¡Ingenio en Acción 2.0! Juegos Scratch que Cambian el Mundo (3º Primaria) - Sesión 1</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; } /* Blue Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3; /* Blue Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        strong { /* Using strong instead of red span for keywords based on workshop example style */
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;} /* Style for static title */
+         em { /* Style for facilitator notes within dialogue */
+            display: block; /* Puts note on a new line */
+            margin-top: 5px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        // Initialize content hidden state on load
+        window.onload = () => {
+             // Ensure all content starts hidden
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Taller: ¡Ingenio en Acción 2.0! Juegos Scratch que Cambian el Mundo (3º Primaria) - Sesión 1</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2> <!-- Static Title -->
+
+        <!-- De un Vistazo y Preparación Previa -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 De un Vistazo: Sesión 1</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivos:</strong>
+                            <ul>
+                                <li>Presentar el taller, la receta y el objetivo (diseñar un juego ODS en Scratch).</li>
+                                <li>Formar equipos de "Desarrolladores de Juegos".</li>
+                                <li>Establecer el "Código del Innovador" para el trabajo en equipo.</li>
+                                <li>Conectar el taller con las habilidades de Scratch adquiridas.</li>
+                                <li>Introducir los ODS como inspiración para los juegos.</li>
+                                <li>Mostrar ejemplos inspiradores ("Shots de Inspiración Lúdica").</li>
+                                <li><strong>Táctica 1:</strong> Definir las restricciones creativas iniciales del juego (género, mecánica, mensaje ODS) usando "Fence the Playground".</li>
+                            </ul>
+                            <strong>💡 Tácticas Principales:</strong> Fence the Playground (Adaptado: Delimitando Nuestro Patio de Juego Scratch).
+                            <br><br>
+                            <strong>🔑 Entregable Clave:</strong> "Restricciones de Juego Scratch" definidas por cada equipo (en Miro o similar).
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Láminas 1-12 detalladas abajo).</li>
+                                <li>Acceso a tablero Miro (o similar) preparado con secciones para cada equipo.</li>
+                                <li>Iconos/Imágenes de los ODS.</li>
+                                <li>Ejemplos "Shots de Inspiración Lúdica" (Láminas 6-10).</li>
+                                <li>Ejemplo "Coral Bleaching" para Fence the Playground (Lámina 12).</li>
+                            </ul>
+                             <strong>🔧 Preparación Previa para ESTA Sesión:</strong>
+                            <ol>
+                                <li><strong>Presentación Lista:</strong> Tener listas las Láminas 1 a 12. Asegurar que los ejemplos visuales sean claros y atractivos.</li>
+                                <li><strong>Tablero Digital:</strong> Preparar el espacio en Miro con secciones para cada equipo, incluyendo un área para "Restricciones de Juego Scratch".</li>
+                                <li><strong>Código Innovador:</strong> Adaptar el texto a "Desarrolladores de Juegos Scratch".</li>
+                                <li><strong>Conexión Scratch:</strong> Revisar proyectos o habilidades clave de 3º para mencionar en el Framing.</li>
+                                <li><strong>Ejemplo Coral Bleaching:</strong> Tener lista la Lámina 12 con el ejemplo de cómo "Coral Bleaching" definió sus restricciones.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Bienvenida e Introducción -->
+        <div id="activity-1" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">👋 Actividad 1: Bienvenida e Introducción a "¡Ingenio en Acción 2.0!" ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 1</strong>: Título "¡Ingenio en Acción 2.0! - Juegos Scratch que Cambian el Mundo" (Emojis 🎮🌍), Imagen: Collage (personajes Scratch, controles, planeta Tierra, estilo "COOL"), Texto: "¡Prepárense para crear videojuegos increíbles en Scratch que cambien el mundo... ¡jugando!".
+                        </td>
+                        <td>
+                            "¡Hola, genios de Scratch! ¡Bienvenidos al taller 'Ingenio en Acción 2.0: Juegos Scratch que Cambian el Mundo'! ¡Prepárense para crear videojuegos increíbles que además de ser súper divertidos, ayuden a nuestro planeta! 🌍💡"
+                            <br><br>
+                            "En este taller, vamos a convertirnos en diseñadores de videojuegos ¡de verdad! Vamos a usar Scratch, la herramienta que ya dominan, para crear juegos originales y llenos de ingenio."
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Introducción a la Receta -->
+        <div id="activity-2" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">📜 Actividad 2: Introducción a la Receta "Ingenio en Acción 2.0" y Tácticas ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 2</strong>: Título: "Receta Secreta: ¡Ingenio en Acción 2.0! - Niveles para Crear Juegos Scratch Geniales" (Imagen pergamino con iconos de juego/Scratch). Lista de las 6 tácticas (niveles), con icono/número de nivel y frase inspiradora en 1ª persona. Texto: "¡6 Niveles para Diseñar Videojuegos Scratch que Dejan Huella!".
+                        </td>
+                        <td>
+                             "Y para guiarnos en este viaje creativo, vamos a usar una 'receta secreta' llamada 'Get to Fully-Baked', ¡adaptada para crear nuestros 'Juegos Scratch que Cambian el Mundo'! Esta receta tiene 6 <strong>'Niveles Creativos'</strong> que vamos a superar juntos. ¡Cada nivel es una táctica súper útil con un poder especial!"
+                             <br><br>
+                             <em>(Señalar cada Nivel en la Diapositiva 2 mientras se lee la frase inspiradora):</em>
+                             <br>
+                            "<strong>Nivel 1:</strong> ¡Definiremos las REGLAS de nuestro juego para enfocar nuestros súper poderes creativos!"
+                             <br>
+                            "<strong>Nivel 2:</strong> ¡Desataremos una LLUVIA de ideas geniales para nuestro juego en tiempo récord!"
+                             <br>
+                            "<strong>Nivel 3:</strong> ¡Dibujaremos la AVENTURA de nuestro juego paso a paso, como directores de cine!"
+                             <br>
+                            "<strong>Nivel 4:</strong> ¡POTENCIAREMOS nuestra idea y arreglaremos problemillas con la ayuda del equipo!"
+                             <br>
+                            "<strong>Nivel 5:</strong> ¡Crearemos el MAPA final de nuestro juego, listo para construirlo en Scratch!"
+                             <br>
+                            "<strong>Y al final...</strong> ¡Presentaremos nuestros juegos al mundo!"
+                             <br><br>
+                             "¡Cada nivel nos acerca más a nuestra meta! ¡Vamos a superarlos con ingenio y creatividad!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+         <!-- Actividad 3: Formación de Equipos -->
+        <div id="activity-3" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                 <div class="title">🤝 Actividad 3: Formación de Equipos "Desarrolladores de Juegos" ⏰ Tiempo: 3 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Dar instrucciones para formar equipos de 3 o 4.
+                        </td>
+                        <td>
+                            "¡Ok, desarrolladores de videojuegos, formen sus equipos de 'Mentes Maestras de Scratch'! Únanse en grupos de 3 o 4, sus 'compañeros de aventura creativa'..."
+                            <br><br>
+                            <em>(Instrucciones para formar equipos).</em>
+                            <br><br>
+                            "Recuerden, en el mundo de los videojuegos, ¡el equipo lo es todo!..."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Confirmar equipos y celebrar.
+                        </td>
+                        <td>
+                            "¡Genial! Tenemos nuestros equipos de 'Desarrolladores'. ¡Un aplauso!" <em>(Aplaudir).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+         <!-- Actividad 4: Código del Innovador -->
+        <div id="activity-4" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_4_content')">
+                <div class="title">🛡️ Actividad 4: El Código del Innovador (Adaptado a Desarrolladores de Juegos) ⏰ Tiempo: 3 minutos</div>
+            </div>
+            <div id="activity_4_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 3</strong>: "Código del Innovador Desarrollador de Juegos Scratch" (Adaptado, diseño "COOL").
+                        </td>
+                        <td>
+                            "Todo equipo de desarrolladores de videojuegos tiene un código secreto, ¡y nosotros también! Este es nuestro <strong>'Código del Innovador de Genius Club'</strong> (adaptado para ustedes). Son reglas para que trabajemos juntos como profesionales y creemos videojuegos ¡alucinantes!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 2:</strong> Leer el código adaptado con énfasis.
+                        </td>
+                        <td>
+                            <em>(Leer el "Código del Innovador" adaptado con énfasis. Ejemplo de puntos adaptados: 1. Jugamos en equipo: ¡Nos ayudamos y compartimos ideas! 2. Todas las ideas suben de nivel: ¡Respetamos y construimos sobre las ideas de todos! 3. Modo Creativo Activado: ¡Probamos cosas nuevas y aprendemos de los errores! 4. ¡Misión Aceptada!: Trabajamos juntos para lograr nuestro objetivo. 5. Creamos juegos con Superpoderes: ¡Nuestros juegos ayudan al planeta!).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 3:</strong> Recordar la importancia del código.
+                        </td>
+                         <td>
+                            "¡Recuerden este código!"
+                         </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5: Framing del Taller -->
+        <div id="activity-5" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_5_content')">
+                 <div class="title">🌍 Actividad 5: Framing del Taller: "Juegos Scratch que Cambian el Mundo" ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_5_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 4</strong>: (Renumerada) Título: "Juegos Scratch que Cambian el Mundo: ¡Nuestro Poder de Videojuegos!". Iconos/Imágenes: Scratch, consolas, mundos virtuales, impacto positivo. Texto/Pregunta clave: "¿Cómo podemos usar Scratch para crear videojuegos que ayuden a cambiar el mundo?".
+                        </td>
+                        <td>
+                           "¡Este año se han vuelto unos expertos en Scratch! <em>(Mencionar habilidad/proyecto clave de 3º, ej: ¿Recuerdan ese juego increíble de laberinto que programaron?)</em>. ¡Son unos artistas de la programación visual!"
+                           <br><br>
+                           "Ahora, en 'Ingenio en Acción 2.0', usaremos ese poder para crear ¡videojuegos que cambien el mundo! Juegos divertidos que enseñen sobre problemas del planeta."
+                           <br><br>
+                           "¡Imaginen VIDEOJUEGOS CON SUPERPODERES que inspiren a otros a cuidar el planeta!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+         <!-- Actividad 6: Introducción a los ODS -->
+        <div id="activity-6" class="activity" data-time="2">
+            <div class="banner" onclick="toggleContent('activity_6_content')">
+                 <div class="title">🎯 Actividad 6: Introducción a los ODS ⏰ Tiempo: 2 minutos</div>
+            </div>
+            <div id="activity_6_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 5</strong>: Título: "Nuestra Inspiración: ¡Misiones ODS para un Mundo Mejor!". Imágenes/iconos de los ODS (Idealmente los 17, dispuestos de forma atractiva, o una selección amplia).
+                        </td>
+                        <td>
+                            "¡Desarrolladores! Para que nuestros juegos realmente cambien el mundo, necesitamos inspirarnos en las <strong>misiones más importantes del planeta</strong>: los Objetivos de Desarrollo Sostenible, ¡los <strong>ODS</strong>! Son 17 desafíos que los países acordaron resolver juntos."
+                            <br><br>
+                            "Piensen en ellos como ¡los 'Jefes Finales' que nuestro planeta necesita vencer! Y nuestros juegos pueden ser las 'armas secretas' o las 'guías' para ayudar a lograrlo. Les presento rápidamente algunas de estas grandes misiones:"
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                             <strong>Paso 2:</strong> Mostrar la lámina con los iconos y dar una explicación MUY breve y adaptada a 3º para CADA UNO o para los más relevantes (según el tiempo).
+                        </td>
+                        <td>
+                            <em>(Mostrar la lámina con los iconos y dar una explicación MUY breve y adaptada a 3º para CADA UNO o para los más relevantes, usando las frases del PDF):</em>
+                            <br>"1. Fin de la Pobreza: ¡Que nadie sea pobre y todos tengamos lo necesario!"
+                            <br>"2. Hambre Cero: ¡Que todos en el mundo tengan comida suficiente y saludable!"
+                            <br>"3. Salud y Bienestar: ¡Estar sanos, poder ir al médico y sentirnos bien!"
+                            <br>"4. Educación de Calidad: ¡Que todos los niños y niñas aprendamos cosas geniales en la escuela!"
+                            <br>"5. Igualdad de Género: ¡Que las chicas y los chicos tengamos los mismos derechos y oportunidades!"
+                            <br>"6. Agua Limpia y Saneamiento: ¡Tener agua pura para beber y baños limpios para todos!"
+                            <br>"7. Energía Asequible y No Contaminante: ¡Usar energías como el sol y el viento que no ensucien nuestro planeta!"
+                            <br>"8. Trabajo Decente y Crecimiento Económico: ¡Que los adultos tengan buenos trabajos y todos podamos progresar!"
+                            <br>"9. Industria, Innovación e Infraestructura: ¡Construir cosas nuevas e inteligentes (como nuestros juegos!) para ayudar a todos!"
+                            <br>"10. Reducción de las Desigualdades: ¡Que todos seamos tratados justamente, sin importar de dónde vengamos o cómo seamos!"
+                            <br>"11. Ciudades y Comunidades Sostenibles: ¡Tener lugares seguros, limpios y verdes donde vivir!"
+                            <br>"12. Producción y Consumo Responsables: ¡No desperdiciar las cosas y cuidar lo que compramos y usamos!"
+                            <br>"13. Acción por el Clima: ¡Frenar el calentamiento del planeta y cuidar nuestro clima!"
+                            <br>"14. Vida Submarina: ¡Proteger a los peces, ballenas y corales de nuestros océanos!"
+                            <br>"15. Vida de Ecosistemas Terrestres: ¡Cuidar los bosques, los animales y las plantas de la tierra!"
+                            <br>"16. Paz, Justicia e Instituciones Sólidas: ¡Vivir en paz, con reglas justas y personas que nos ayuden!"
+                            <br>"17. Alianzas para lograr los Objetivos: ¡Trabajar todos juntos (países, escuelas, ¡nosotros!) para conseguir estas metas!"
+                            <br><br>
+                            "¡Wow! Son muchas misiones importantes. En el siguiente paso, cada equipo elegirá las 'Reglas de Juego' incluyendo qué Mensaje ODS Clave quieren abordar con su videojuego Scratch."
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7: Shots de Inspiración Lúdica -->
+        <div id="activity-7" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_7_content')">
+                 <div class="title">💡 Actividad 7: "Shots de Inspiración Lúdica": Videojuegos que Cambian el Mundo ⏰ Tiempo: 3 minutos</div>
+            </div>
+            <div id="activity_7_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 6</strong>: Título: "Shots de Inspiración Lúdica: ¡Juegos con Misión!" (Collage).
+                            <br><br>
+                            <strong>Paso 2:</strong> Mostrar secuencialmente las <strong>Diapositivas 7, 8, 9 y 10</strong> con los ejemplos.
+                        </td>
+                        <td>
+                            "¡Desarrolladores, miren rápido estos juegos que ya cambian el mundo!"
+                            <br><br>
+                            <em>(Mostrar cada lámina y leer el guion correspondiente MUY brevemente):</em>
+                            <br><strong>(Diapositiva 7 - Coral Bleaching):</strong> "¡Un juego para entender por qué los corales pierden color y cómo salvarlos!"
+                            <br><strong>(Diapositiva 8 - Ecópolis):</strong> "¡Construyes ciudades cuidando el planeta para bajar la temperatura del mundo!"
+                            <br><strong>(Diapositiva 9 - Foldit):</strong> "¡Un puzzle súper difícil que ayuda a científicos a encontrar curas de verdad!"
+                            <br><strong>(Diapositiva 10 - Kick Ups for Food):</strong> "¡Juegas fútbol para entender cómo evitar que la comida se desperdicie!"
+                            <br><br>
+                            "¡Los videojuegos pueden hacer mucho más que divertir!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 8: Táctica 1: Fence the Playground -->
+        <div id="activity-8" class="activity" data-time="12">
+            <div class="banner" onclick="toggleContent('activity_8_content')">
+                 <div class="title">🚧 Actividad 8: Táctica 1: Fence the Playground (Adaptado a Diseño de Juegos Scratch) ⏰ Tiempo: 12 minutos</div>
+            </div>
+            <div id="activity_8_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 11</strong>: Título: "Nivel 1: Fence the Playground - ¡Nuestras Reglas de Juego Scratch!" (Iconos 🚧🎮). Explicación: "Definir las 'Reglas de Juego Scratch' para enfocar nuestra creatividad." Lista de "Restricciones de Diseño": Género, Mecánica Principal, Mensaje ODS Clave.
+                        </td>
+                        <td>
+                             "¡Ok, desarrolladores, primer nivel creativo! Vamos a usar <strong>'Fence the Playground'</strong> para poner las reglas de nuestro propio juego. ¡Así nos enfocamos!"
+                             <br><br>
+                             "En equipo, piensen y decidan estas 3 cosas para SU juego ODS:"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                           <strong>Paso 2:</strong> Explicar las 3 restricciones.
+                        </td>
+                        <td>
+                            "<strong>1. Género:</strong> ¿Qué tipo de juego será? (Ej: Plataformas, Puzzle, Clickeador, Carrera...). Elijan uno que sepan hacer en Scratch."
+                            <br><br>
+                            "<strong>2. Mecánica Principal:</strong> ¿Qué hará el jugador la mayor parte del tiempo? (Ej: Saltar, Recoger cosas, Esquivar, Contestar preguntas...). Elijan una acción divertida y programable."
+                            <br><br>
+                            "<strong>3. Mensaje ODS Clave:</strong> ¿Cuál es la idea MÁS importante sobre el ODS que quieren que el jugador aprenda? (Ej: 'Reciclar ayuda', 'Ahorrar agua es vital', 'Plantar árboles limpia el aire'). ¡Un mensaje corto y claro!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3:</strong> Instruir a los equipos para que escriban sus reglas en Miro/papel. Circular y ayudar.
+                        </td>
+                        <td>
+                            "¡Hablen en equipo y escriban sus 3 reglas en su tablero Miro en la sección 'Restricciones de Juego Scratch'!"
+                            <br><br>
+                            <em>(Circular y ayudar a los equipos a definir restricciones claras y factibles. Anima a que las restricciones sean específicas pero no demasiado limitantes aún. Deben guiar, no ahogar).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 4:</strong> Proyectar la <strong>Diapositiva 12</strong>: (Ejemplo Coral Bleaching - ILUSTRACIÓN DE LA TÁCTICA) Título: "Ejemplo Táctica 1: Las Reglas de 'Coral Bleaching'". Texto: "Género: Simulador Interactivo / Juego Educativo.", "Mecánica Principal: Ajustar variables (temperatura, contaminación) y observar el efecto.", "Mensaje ODS Clave: El aumento de temperatura y la contaminación dañan los corales (ODS 14)."
+                        </td>
+                        <td>
+                            "Miren el ejemplo del juego 'Coral Bleaching'. Ellos decidieron que sería un <strong>Simulador</strong> (Género), donde la acción principal es <strong>Ajustar Variables</strong> (Mecánica), para enseñar que el <strong>calor y la contaminación dañan los corales</strong> (Mensaje ODS). ¡Así definieron sus reglas! Ahora definan las suyas."
+                            <br><br>
+                            <em>(Entregable: "Restricciones de Juego Scratch" (Género, Mecánica, Mensaje ODS) definidas por equipo (en Miro o similar)).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+         <!-- Actividad 9: Cierre de la Sesión 1 -->
+        <div id="activity-9" class="activity" data-time="2">
+            <div class="banner" onclick="toggleContent('activity_9_content')">
+                 <div class="title">🏁 Actividad 9: Cierre de la Sesión 1: Patio de Juego Listo, ¡Creatividad Desatada! ⏰ Tiempo: 2 minutos</div>
+            </div>
+            <div id="activity_9_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Paso 1:</strong> Felicitar por completar el Nivel 1.
+                        </td>
+                        <td>
+                            "¡Excelente trabajo, equipos de desarrollo! ¡Han completado el Nivel 1 definiendo las reglas de su juego! Ya tienen su 'patio de juegos Scratch' listo."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Paso 2:</strong> Anticipar la próxima sesión (Nivel 2: 6-3-5).
+                        </td>
+                         <td>
+                            "Para la próxima sesión, ¡prepárense para la 'Carrera de Ideas 6-3-5'! Con estas reglas en mente, vamos a generar ¡muchísimas ideas específicas para sus juegos: personajes, niveles, premios, desafíos! ¡La creatividad va a explotar!"
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3:</strong> Instrucción final.
+                        </td>
+                        <td>
+                             "Revisen sus restricciones y piensen... ¿qué juegos geniales caben ahí dentro? ¡Nos vemos en la Sesión 2!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
